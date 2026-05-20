@@ -27,3 +27,65 @@ data/rsna-pneumonia-detection-challenge/
 # OS
 .DS_Store
 Thumbs.db
+
+# RSNA data / processed data
+data/rsna-pneumonia-detection-challenge/
+rsna_data/
+rsna_data_sample/
+rsna_processed/
+rsna_processed_sample/
+rsna_yolo/
+rsna_yolo_sample/
+
+# Model checkpoints / pretrained weights
+*.pt
+*.pth
+*.ckpt
+runs/
+outputs/
+outputs_yolo/
+outputs_rtdetr/
+
+# Results / visualizations
+ensemble_all_results_*.txt
+ensemble_summary.csv
+visualizations*/
+
+# Python / system
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# RSNA data / processed data
+data/rsna-pneumonia-detection-challenge/
+rsna_data/
+rsna_data_sample/
+rsna_processed/
+rsna_processed_sample/
+rsna_yolo/
+rsna_yolo_sample/
+
+# Model checkpoints / pretrained weights
+*.pt
+*.pth
+*.ckpt
+runs/
+outputs/
+outputs_yolo/
+outputs_rtdetr/
+
+# Results / visualizations
+ensemble_all_results_*.txt
+ensemble_summary.csv
+visualizations*/
+
+# Python / system
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Raw Kaggle extracted dataset path
+data/rsna-pneumonia-detection-challenge
+data/rsna-pneumonia-detection-challenge/

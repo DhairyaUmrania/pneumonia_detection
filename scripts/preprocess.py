@@ -104,11 +104,13 @@ def prepare_annotations(csv_path: str, output_dir: str, target_size: int = 1024)
         }
 
         if target == 1 and pd.notna(row.get("x")):
-            # Bounding box: x, y, width, height
-            record["x"] = float(row["x"])
-            record["y"] = float(row["y"])
-            record["w"] = float(row["width"])
-            record["h"] = float(row["height"])
+            # RSNA annotations are in original 1024x1024 pixel coordinates.
+            # Scale boxes to match the preprocessed PNG target_size.
+            scale = target_size / 1024.0
+            record["x"] = float(row["x"]) * scale
+            record["y"] = float(row["y"]) * scale
+            record["w"] = float(row["width"]) * scale
+            record["h"] = float(row["height"]) * scale
         else:
             record["x"] = None
             record["y"] = None
